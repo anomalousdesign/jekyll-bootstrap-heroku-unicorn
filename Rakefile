@@ -71,7 +71,7 @@ task :post do
     post.puts "category: #{category}"
     post.puts "tags: #{tags}"
     post.puts "---"
-    post.puts "{% include JB/setup %}"
+    post.puts "<!-- more -->"
   end
 end # task :post
 
@@ -98,7 +98,6 @@ task :page do
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
     post.puts "comments: true"
     post.puts "---"
-    post.puts "{% include JB/setup %}"
   end
 end # task :page
 
