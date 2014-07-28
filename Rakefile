@@ -65,6 +65,8 @@ task :post do
     post.puts "---"
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
+    post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
+    post.puts "comments: true"
     post.puts 'description: ""'
     post.puts "category: #{category}"
     post.puts "tags: #{tags}"
@@ -93,6 +95,8 @@ task :page do
     post.puts "layout: page"
     post.puts "title: \"#{title}\""
     post.puts 'description: ""'
+    post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
+    post.puts "comments: true"
     post.puts "---"
     post.puts "{% include JB/setup %}"
   end
